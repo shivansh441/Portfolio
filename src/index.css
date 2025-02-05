@@ -1,0 +1,1362 @@
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Padding for each section to avoid overlap with sticky navbar */
+#home, #about, #skills, #projects, #contact {
+  padding-top: 60px; /* Adjust according to your navbar height */
+  margin-top: -60px; /* Remove the space occupied by padding */
+}
+
+/* Styling for the navbar */
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.5rem;
+  z-index: 9999;
+}
+
+/* Logo section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.5rem;
+  margin-right: 0.625rem;
+}
+
+.logo-circle:hover {
+  background-color: #ffaa00;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: lowercase;
+  transition: color 0.3s;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+}
+
+.navbar-links li a:hover {
+  background-color: #ffaa00;
+  border-radius: 4rem;
+  color: #000;
+}
+
+/* Social Media links */
+.navbar-social a {
+  color: #fff;
+  font-size: 1.25rem; /* Adjust icon size */
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.navbar-social a:hover {
+  color: #ffaa00;
+}
+
+/* Hamburger Icon Styles */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.navbar-hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Mobile Menu */
+.navbar-menu {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Mobile menu toggle */
+.navbar-links.mobile-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #000; /* Background color for mobile menu */
+  padding: 1rem;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-menu.mobile-active {
+    display: flex;
+  }
+}
+
+
+
+/* Main content container */
+/* Main Content */
+.main-content {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Coder Content */
+.content-coder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  padding: 0rem 5rem 0 10rem;
+}
+
+.content-coder h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-coder h1 span {
+  color: #666;
+}
+
+.content-coder h2 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  color: #292929;
+}
+
+.content-coder p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+/* Image Content */
+.content-image {
+  display: block;
+  position: relative;
+  padding-left: 6rem;
+  padding-top: 2rem;
+}
+
+.content-image .img-2 {
+  width: 18rem;
+  border-radius: 1rem;
+  padding-top: 0;
+  margin: 0%;
+}
+
+.img-1 {
+  position: relative;
+  margin: -6rem 0 0 0;
+}
+
+.bg-image {
+  position: absolute;
+  margin-top: 8rem;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.img-2 {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  margin-top: -2rem;
+}
+
+/* Button styles */
+.home-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+    width: 134%;
+}
+
+.home-button button,
+.download-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button button:hover,
+.download-button:hover {
+  background-color: #ffaa00;
+  color: #000;
+}
+
+/* Download button */
+.download-button {
+  text-decoration: none;
+}
+
+.download-button:hover {
+  text-decoration-color: #000000;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* For tablet and below */
+  .main-content {
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .content-coder {
+    padding: 0 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-coder h1 {
+    font-size: 3.5rem;
+  }
+
+  .content-coder h2 {
+    font-size: 2.5rem;
+  }
+
+  .content-coder p {
+    font-size: 1rem;
+  }
+
+  .content-image {
+    padding-left: 0;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .content-image .img-2 {
+    width: 80%;
+  }
+
+  .img-1 {
+    margin: -3rem 0 0 0;
+  }
+
+  .bg-image {
+    margin-top: 4rem;
+    height: 60%;
+  }
+
+  /* Adjust buttons for smaller screens */
+  .home-button {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .home-button button {
+    width: 100%;
+  }
+
+  .download-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile devices */
+  .main-content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .content-coder {
+    padding: 0 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-coder h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-coder h2 {
+    font-size: 2rem;
+  }
+
+  .content-coder p {
+    font-size: 1rem;
+  }
+
+  .content-image {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .content-image .img-2 {
+    width: 90%;
+  }
+
+  .img-1 {
+    margin: -2rem 0 0 0;
+  }
+
+  .bg-image {
+    margin-top: 3rem;
+    height: 70%;
+  }
+
+  .home-button {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-button button,
+  .download-button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens */
+  .main-content {
+    padding: 1rem;
+  }
+
+  .content-coder h1 {
+    font-size: 2rem;
+  }
+
+  .content-coder h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-coder p {
+    font-size: 0.9rem;
+  }
+
+  .content-image .img-2 {
+    width: 100%;
+  }
+
+  .img-1 {
+    margin: -1.5rem 0 0 0;
+  }
+
+  .bg-image {
+    margin-top: 2rem;
+    height: 80%;
+  }
+
+  .home-button {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-button button,
+  .download-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* About Page Container */
+/* About Page */
+.about-page {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #000;
+}
+
+/* Title Section */
+.about-title h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.about-title h1 span {
+  color: #ffaa00;
+  /* Accent color */
+}
+
+.about-title p {
+  color: #fff;
+  margin: 0.625rem auto;
+  font-size: 1.125rem;
+  max-width: 37.5rem;
+}
+
+/* About Content */
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6rem;
+  margin-top: 1.875rem;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+/* Image Section */
+.about-image {
+  margin: 5rem;
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background-color: rgb(97, 97, 91);
+  overflow: hidden;
+  /* Ensures the image stays inside the circle */
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the image covers the container while maintaining aspect ratio */
+  border-radius: 50%;
+}
+
+/* Text Section */
+.about-text {
+  max-width: 37.5rem;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 0.9375rem;
+}
+
+/* Responsive Styles */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .about-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-title p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 2rem; /* Adjust the gap between the image and text */
+    align-items: center;
+  }
+
+  .about-image {
+    width: 15rem;
+    height: 15rem;
+    margin: 2rem 0;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .about-title p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 1.125rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+  .about-title h1 {
+    font-size: 1.75rem;
+  }
+
+  .about-title p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 10rem;
+    height: 10rem;
+    margin: 1.5rem 0;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 1rem;
+  }
+
+  .about-text p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* General Styles for Skills Section */
+/* General Styles for Skills Section */
+/* Skills Section */
+.skills-section {
+  padding: 2rem 5rem;
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-section h2 {
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+/* Skills Container with responsive grid */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Adjusted for responsive grid */
+  gap: 3rem; /* Reduced gap between items */
+  justify-items: center;
+}
+
+/* Individual Skill */
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering content horizontally */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover Effect */
+.skill:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Image Styling */
+.skill img {
+  width: 4.5rem; /* Reduced image size for better alignment */
+  height: 4.5rem; /* Set a consistent size */
+  margin: 1rem; /* Space between image and text */
+}
+
+/* Skill Name Styling */
+.skill-name {
+  font-size: 1.5rem; /* Increased font size */
+  color: #000;
+  text-align: center;
+  font-weight: bold; /* Made the skill name bold */
+}
+
+/* Responsive Styles */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .skills-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); /* Adjusting column size for tablet */
+    gap: 2rem; /* Reduced gap for better use of space */
+  }
+
+  .skill img {
+    width: 3.5rem; /* Reduced image size on tablet */
+    height: 3.5rem;
+  }
+
+  .skill-name {
+    font-size: 1.25rem; /* Reduced font size on tablet */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); /* Adjusting for smaller screens */
+    gap: 1.5rem; /* Reduced gap */
+  }
+
+  .skill img {
+    width: 3rem; /* Further reduced image size */
+    height: 3rem;
+  }
+
+  .skill-name {
+    font-size: 1rem; /* Reduced font size for mobile */
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+  .skills-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); /* Further adjusting for small screens */
+    gap: 1.25rem; /* Reduced gap */
+  }
+
+  .skill img {
+    width: 2.5rem; /* Reduced image size for smaller screens */
+    height: 2.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem; /* Smaller font size for smaller devices */
+  }
+}
+
+
+/* Projects Container */
+
+/* Projects Container */
+.projects-container {
+  background-color: #000000;
+  padding: 0.5rem 2rem 2rem 2rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Header Styles */
+.projects-container h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.projects-container h1 span {
+  color: #ffaa00;
+}
+
+/* Project Box Styles */
+.project-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Project Title Styles */
+.project-title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* Project Content Styles */
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #000;
+}
+
+/* Carousel Image Styles */
+.carousel-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px; /* Ensure image fits within this size */
+}
+
+.carousel-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  object-fit: cover; /* Ensure images maintain aspect ratio without stretching */
+}
+
+/* Project Description Styles */
+.project-description {
+  padding: 1.2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 1rem;
+  width: 100%; /* Take full width of the right column */
+}
+
+.project-description p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Carousel Dots Styles */
+.react-multi-carousel-dot {
+  background: #b3b0b0; /* Dot color */
+  border-radius: 50%;
+  width: 12px; /* Increase the size of the dots */
+  height: 12px; /* Increase the size of the dots */
+  margin: 0 6px;
+}
+
+/* Change the active dot color and size */
+.react-multi-carousel-dot--active {
+  background: #944f43; /* Active dot color */
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets and Below (Max width 768px) */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 1rem 1rem 1rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .projects-container h1 {
+    font-size: 2.5rem; /* Slightly smaller font for headings */
+  }
+
+  /* Stack content vertically */
+  .project-content {
+    grid-template-columns: 1fr; /* Stack image and description on top of each other */
+    padding: 1rem 0; /* Adjust padding */
+  }
+
+  .project-title {
+    font-size: 1.5rem; /* Slightly smaller font size */
+  }
+
+  .carousel-image img {
+    width: 100%; /* Ensure images scale appropriately */
+    height: auto;
+    border-radius: 8px; /* Adjust border radius for smaller screens */
+  }
+
+  .project-description {
+    padding: 1rem; /* Adjust padding for description */
+  }
+
+  .project-description p {
+    font-size: 0.9rem; /* Smaller text for descriptions */
+  }
+}
+
+/* For Mobile Devices (Max width 480px) */
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 0.5rem; /* Less padding on very small screens */
+  }
+
+  .projects-container h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  /* Stack content vertically */
+  .project-content {
+    grid-template-columns: 1fr; /* Stack content in one column */
+    padding: 1rem; /* Adjust padding for mobile */
+  }
+
+  .project-title {
+    font-size: 1.25rem; /* Smaller title font size */
+  }
+
+  .carousel-image img {
+    width: 100%; /* Ensure images are full width on mobile */
+    height: auto;
+  }
+
+  .project-description {
+    padding: 0.8rem; /* Adjust padding */
+  }
+
+  .project-description p {
+    font-size: 0.9rem; /* Smaller description text */
+  }
+}
+
+
+/* Contact Container */
+/* General Styles */
+.contact-container {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row; /* Align items in a row on larger screens */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Title */
+.contact-title {
+  text-align: left;
+  margin-left: 3rem;
+  font-size: 3rem; /* Title size */
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Content Layout */
+.contact-content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0rem;
+  width: 100%;
+}
+
+/* Image Container */
+.image-container {
+  flex: 1;
+  margin-left: 10rem;
+  padding: 3rem 0rem 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%; /* Ensure container doesn't overflow */
+}
+
+.contact-image {
+  width: 40rem; /* Set width to 100% of the container */
+  height: 34rem; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+
+}
+
+/* Form Container */
+.form-container {
+  flex: 1;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+  padding: 0rem 6rem 2rem 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+input,
+textarea {
+  width: 95%;
+  padding: 0.75rem;
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 0px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #FFAA00;
+  outline: none;
+}
+
+.submit-button {
+  padding: 0.75rem;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #FFAA00;
+  color: black;
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets (Max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack image and form vertically on tablets */
+    padding: 2rem 1rem; /* Adjust padding */
+  }
+
+  .contact-title {
+    font-size: 2.5rem; /* Adjust title font size */
+    text-align: center; /* Center title on small screens */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .image-container {
+    margin-left: 0; /* Remove left margin for image */
+    padding: 3rem 0rem; /* Adjust padding */
+  }
+
+  .contact-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Adjust height for responsiveness */
+  }
+
+  .form-container {
+    padding: 0 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .contact-form {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem; /* Adjust font size */
+    padding: 1rem; /* Increase padding */
+  }
+
+  .submit-button {
+    padding: 1rem; /* Increase padding on the submit button */
+    font-size: 1.1rem; /* Adjust font size */
+  }
+}
+
+/* For Mobile Devices (Max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-container {
+    flex-direction: column; /* Stack image and form vertically */
+    padding: 1rem 0.5rem; /* Reduce padding */
+  }
+
+  .contact-title {
+    font-size: 2rem; /* Smaller font size */
+    text-align: center; /* Center title */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .image-container {
+    margin-left: 0;
+    padding: 2rem 0rem; /* Adjust padding */
+  }
+
+  .contact-image {
+    width: 100%; /* Ensure image is responsive */
+    height: auto; /* Adjust height for mobile screens */
+  }
+
+  .form-container {
+    padding: 0 0.5rem; /* Reduce padding */
+  }
+
+  .contact-form {
+    padding: 1rem 0.5rem; /* Adjust padding */
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem; /* Adjust font size */
+    padding: 1rem; /* Increase padding for ease of use */
+  }
+
+  .submit-button {
+    padding: 1rem; /* Increase button padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+
+
+/* footer  */
+
+/* Footer.css */
+/* Footer Basic Styles */
+.footer {
+  position: relative;
+  background-color: #000000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem; /* Adjusted gap for large screens */
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Footer Columns */
+.footer-left, .footer-center, .footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  flex: 1;
+}
+
+.footer-left {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-right {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-left .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-left .logo h3 {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-left .circle, .footer-left .cross, .footer-left .square {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.3rem;
+}
+
+.circle {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.cross {
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.cross::before, .cross::after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+}
+
+.cross::after {
+  transform: rotate(90deg);
+}
+
+.square {
+  background-color: #ffffff;
+}
+
+.social-icons {
+  color: #ea2626;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-center {
+  display: flex;
+  color: #007BFF;
+  gap: 1.5rem;
+}
+
+.footer-center a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-center a:hover {
+  color: #ffaa00;
+}
+
+.footer-right p {
+  margin: 0.5rem;
+}
+
+.footer-right form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 3px;
+  outline: none;
+  margin-right: 0.5rem;
+  color: #000;
+}
+
+.footer-right button {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border: none;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-right button:hover {
+  background-color: #ffaa00;
+  color: #fff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 1.5rem;
+  color: #b3b3b3;
+  font-size: 0.8rem;
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets (Max-width: 768px) */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack footer sections vertically */
+    gap: 2rem; /* Adjust spacing between sections */
+    padding: 0 1rem; /* Adjust padding */
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    width: 100%; /* Allow sections to take full width */
+    text-align: center; /* Center-align content */
+  }
+
+  .footer-left .logo h3 {
+    font-size: 1.5rem; /* Adjust logo size for tablets */
+  }
+
+  .footer-left .circle, .footer-left .cross, .footer-left .square {
+    width: 20px;
+    height: 20px; /* Increase icon sizes */
+  }
+
+  .social-icons {
+    font-size: 1.5rem; /* Increase social icon size */
+  }
+
+  .footer-center a {
+    font-size: 1.1rem; /* Increase link size */
+  }
+
+  .footer-right input[type="email"] {
+    width: 100%; /* Make email input full-width */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .footer-right button {
+    width: 100%; /* Make button full-width */
+    margin-left: 0; /* Remove left margin */
+    padding: 1rem; /* Increase padding */
+  }
+
+  .footer-bottom {
+    font-size: 1rem; /* Increase footer bottom font size */
+    text-align: center; /* Center-align footer bottom */
+  }
+}
+
+/* For Mobile Devices (Max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 1.5rem; /* Adjust gap between sections */
+    padding: 0 1rem; /* Adjust padding */
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    width: 100%; /* Ensure each section takes full width */
+    text-align: center; /* Center-align all text */
+  }
+
+  .footer-left .logo h3 {
+    font-size: 1.3rem; /* Adjust logo size */
+  }
+
+  .footer-left .circle, .footer-left .cross, .footer-left .square {
+    width: 20px;
+    height: 20px; /* Adjust icon size for small screens */
+  }
+
+  .social-icons {
+    font-size: 1.5rem; /* Increase size for touchscreens */
+  }
+
+  .footer-center a {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .footer-right input[type="email"] {
+    width: 100%; /* Make email input full-width */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .footer-right button {
+    width: 100%; /* Full-width button */
+    padding: 1rem; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .footer-bottom {
+    font-size: 1rem; /* Adjust footer bottom font size */
+    text-align: center; /* Center-align footer bottom */
+  }
+}
