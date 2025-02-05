@@ -1,6 +1,12 @@
 html {
-  scroll-behavior: smooth; /* Enable smooth scrolling */
+  scroll-behavior: smooth; 
+ 
 }
+body {
+  max-width: 100vw; /* Prevents the body from extending beyond the viewport */
+  overflow-x: hidden; /* Hides any overflow horizontally */
+}
+
 
 /* Padding for each section to avoid overlap with sticky navbar */
 #home, #about, #skills, #projects, #contact {
